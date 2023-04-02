@@ -10,7 +10,6 @@ snowball = SnowballStemmer(language="russian")
 
 
 def tokenize(sentence):
-
     return nltk.word_tokenize(sentence, language="russian")
 
 

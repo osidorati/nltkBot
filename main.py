@@ -80,44 +80,6 @@ def send_text(message):
         bot.send_message(message.chat.id, f"Bot: I do not understand..." + "\n")
         print(f"{bot_name}: I do not understand...")
 
-#
-# data = pd.read_csv('labirint_n.csv', converters={"Описание": lambda x: x.lower()}, encoding="1251", sep=';')
-# books = data["Описание"].tolist()
-# print(type(books))
-# uni_tfidf = text.TfidfVectorizer(input=books)
-#
-# uni_matrix = uni_tfidf.fit_transform(books)
-# uni_sim = cosine_similarity(uni_matrix)
-# indices = pd.Series(data.index, index=data['Название']).drop_duplicates()
-#
-
-
-# def choice_help(message):
-#     global book
-#     book = message.text
-#
-#     data["Recommended_books"] = [recommend_articles(x) for x in uni_sim]
-#
-#     n = get_rec('Так говорил Заратустра. Книга для всех и ни для кого', uni_sim)
-#     bot.send_message(message.chat.id, n)
-#     bot.register_next_step_handler(message, send_text)
-#
-#
-# def recommend_articles(x):
-#     return ", ".join(data["Название"].loc[x.argsort()[-5:-1]])
-#
-#
-# def get_rec(title, cosine_sim):
-#     idx = indices[title]
-#     sim_scores = list(enumerate(cosine_sim[idx]))
-#     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-#     sim_scores = sim_scores[1:11]
-#     book_indices = [i[0] for i in sim_scores]
-#     m = data['Название'].iloc[book_indices]
-#     m.to_dict()
-#     print(m)
-#     return m
-
 
 def address(message):
     global city
